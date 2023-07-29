@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #777272;
+    background-image: url('resources/desert2.png'); 
+}
+h1, h2, h3, p {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.content {
+    margin: 50px auto; 
+    width: 85%; 
+    background-color: #e4e3e3; 
+    padding: 20px; 
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2); 
+}
+
+.container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #fff; 
+    padding: 10px; 
+    width: 95%; 
+    margin: 1 auto; 
+    border: 5px solid #ccc; 
+}
+
+.round-button {
+    display: inline-block;
+    padding: 15px 15px;
+    background-color: #754fb1;
+    color: #fff6f6;
+    text-decoration: none;
+    border: none;
+    border-radius:15px; 
+    cursor: pointer;
+}
+
+.round-button:hover {
+    transform: scale(1.05); 
+}
+
+.round-button:active{
+    transform: scale(0.95);
+}

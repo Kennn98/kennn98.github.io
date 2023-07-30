@@ -43,7 +43,6 @@ function update(parameter){
 
     // console.log(data[parameter]);
   
-    // update bars
     s.enter()
       .append("circle")
       .merge(s)
@@ -63,13 +62,6 @@ function update(parameter){
       .append('text')
       .attr('text-anchor', 'middle')
       .text('HDI')
-
-    // svg.append('g')
-    //   .attr('transform', 'translate(' + 20 + ', ' + 50 + ')')
-    //   .append('text')
-    //   .attr('text-anchor', 'middle')
-    //   .attr('transform', 'rotate(-90)')
-    //   .text(parameter)
 })
 }
 

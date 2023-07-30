@@ -35,30 +35,6 @@ var y_GNI = d3.scaleLinear()
 
 var colorScale = d3.interpolateHclLong("red","green")
 
-var tooltip = d3.select("#scene2").append("div").attr("class", "tooltip")
-.style("opacity",0)
-.style("background-color", "white")
-.style("border","solid")
-.style("padding","3px")
-
-var on = function(d) {
-    tooltip.style("opacity", 1)
-    d3.select(this)
-      .style("stroke", "black")
-      .style("opacity", 1)}
-var move =  function(d) {
-    tooltip.html("The exact HDI is: " + d.HDI, "\n Country:", d.Country, "\n GNI:", d.GNI)
-      .style("left", (d3.mouse(this)[0]+50))
-      .style("top", (d3.mouse(this)[1]))
-      .style("opacity", 0.6)
-    }
-var leave = function(d) {
-    tooltip.style("opacity", 0)
-    d3.select(this)
-      .style("stroke", "none")
-      .style("opacity", 1)
-  }
-
 
 // Bars
 svg.selectAll("barchart")
@@ -70,9 +46,6 @@ svg.selectAll("barchart")
 .attr("y", function(d) { return height - y_GNI(d.GNI); })
 .attr("fill", function (d, i) {return colorScale(parseFloat(d.HDI))})
 .attr("height", function(d) { return y_GNI(d.GNI) ; })
-.on("mouseover", on)
-.on("mousemove", move)
-.on("mouseleave", leave)
 
 // y label
 svg.append('g')

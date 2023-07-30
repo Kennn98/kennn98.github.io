@@ -27,10 +27,6 @@ d3.csv("https://kennn98.github.io/data/human-development-index-hdi-2014.csv")
     svg.append("g")
     .call(d3.axisLeft(y_GNI));
     
-    var z_GNI = d3.scaleLinear()
-    .domain([0, 90000])
-    .range([2, 20]);
-    
     var colorScale = d3.interpolateHclLong("red","green")
 
     svg.append('g')
@@ -43,6 +39,9 @@ d3.csv("https://kennn98.github.io/data/human-development-index-hdi-2014.csv")
     .attr("r", 5)
     .attr("fill",function (d, i) {return colorScale(parseFloat(d.HDI))})
     .attr("opacity", 0.8)
+    .on("mouseover", showTooltip )
+    .on("mousemove", moveTooltip )
+    .on("mouseleave", hideTooltip )
 
     svg.append('g')
     .attr('transform', 'translate(' + 20 + ', ' + 50 + ')')
@@ -58,5 +57,4 @@ d3.csv("https://kennn98.github.io/data/human-development-index-hdi-2014.csv")
     .text('HDI')
 })
 
-// add tool tip
 

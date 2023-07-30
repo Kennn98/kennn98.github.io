@@ -5,12 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scene 2</title>
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.5.1/d3-annotation.min.js" 
+        integrity="sha512-iBAeBWWWFb8HqSBcrqcz98iIpuVH1la39dEYHtyQ/pGpeCQTQVvLJOWAuhv2Q7JSHp9k7hWA7sGxU3hHJe+tFg==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/topojson-client@3"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="content">
-        <h1>Scene 2</h1>
-        <p>TODOTODO.</p>
+        <h1>HDI Dig-in: Ranking of HDI </h1>
+        <p>In this scene, we are trying to dig in to HDI: 
+            the previous scene cannot show the ranking of HDI, 
+            also the global map is too big to show these small countries, 
+            which have high HDI but very small area.</p>
+        <div id="chart", class="container">
+            <svg id="scene2" width="600" height="500"></svg>
+            <script src="js/scene2.js"></script>
+        </div>
         <a href="page1.html"><button class="round-button">PREV Scene</button></a>
         <a href="page3.html"><button class="round-button">NEXT Scene</button></a>
     </div>

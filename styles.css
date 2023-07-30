@@ -11,7 +11,7 @@ h1, h2, h3, p {
 .content {
     margin: 50px auto; 
     width: 85%; 
-    background-color: #e4e3e3; 
+    background-color: #fdfdfd; 
     padding: 20px; 
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.2); 
 }
@@ -19,7 +19,7 @@ h1, h2, h3, p {
 .container {
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: #fff; 
+    background-color: #ffffff; 
     padding: 10px; 
     width: 95%; 
     margin: 1 auto; 

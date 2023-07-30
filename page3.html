@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="content">
-        <h1>HDI Next Step: Freeroam</h1>
+        <h1>HDI Final Step: Free Roam</h1>
         <p>This last chart will be a freeform exploration of all three parameters. I choose scatter plot 
             in this case together with the tooltip, showing all the information of the datum while the location 
             of the circle persists to the parameter that the user chooses vs the HDI. The color 
@@ -22,9 +22,9 @@
             is the HDI, and the locations of the circles let user to understand the general 
             correlation with the current parameter with HDI.</p>
         <div id="chart", class="container">
-            <button onclick="update(data1)">Economy(GNI)</button>
-            <button onclick="update(data2)">Medical(Life Expectation at birth)</button>
-            <button onclick="update(data3)">Education(Year of Schooling)</button>
+            <button onclick="update('GNI')">Economy(GNI)</button>
+            <button onclick="update('Lexp')">Medical(Life Expectation at birth)</button>
+            <button onclick="update('YOS')">Education(Year of Schooling)</button>
             <svg id="scene3" width="600" height="500"></svg>
             <script src="js/scene3.js"></script>
         </div>

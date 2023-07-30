@@ -49,12 +49,14 @@ var on = function(d) {
 var move =  function(d) {
     tooltip.html("The exact HDI is: " + d.HDI, "\n Country:", d.Country, "\n GNI:", d.GNI)
       .style("left", (d3.mouse(this)[0]+50))
-      .style("top", (d3.mouse(this)[1]))}
+      .style("top", (d3.mouse(this)[1]))
+      .style("opacity", 0.6)
+    }
 var leave = function(d) {
     tooltip.style("opacity", 0)
     d3.select(this)
       .style("stroke", "none")
-      .style("opacity", 0.7)
+      .style("opacity", 1)
   }
 
 
@@ -68,7 +70,11 @@ svg.selectAll("barchart")
 .attr("y", function(d) { return height - y_GNI(d.GNI); })
 .attr("fill", function (d, i) {return colorScale(parseFloat(d.HDI))})
 .attr("height", function(d) { return y_GNI(d.GNI) ; })
+.on("mouseover", on)
+.on("mousemove", move)
+.on("mouseleave", leave)
 
+// y label
 svg.append('g')
     .attr('transform', 'translate(' + 20 + ', ' + 50 + ')')
     .append('text')
@@ -77,13 +83,11 @@ svg.append('g')
     .text('GNI(usd)')
 
 const x_labelheight = height - 10;
-const x_labelwidth = width - 20;
+const x_labelwidth = width - 50;
 svg.append('g')
     .attr('transform', 'translate(' + x_labelwidth + ', ' + x_labelheight + ')')
     .append('text')
     .attr('text-anchor', 'middle')
     .text('Country')
-    .on("mouseover", on)
-    .on("mousemove", move)
-    .on("mouseleave", leave)
+    
 })

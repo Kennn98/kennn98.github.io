@@ -14,7 +14,7 @@
     <div class="content">
         <h1>HDI Final Step: Free Roam</h1>
         <p>This last chart will be a freeform exploration of all three parameters. I choose scatter plot 
-            in this case together with the tooltip, showing all the information of the datum while the location 
+            in this case, showing all the information of the datum while the location 
             of the circle persists to the parameter that the user chooses vs the HDI. The color 
             of the circle persists as the color scale of HDI to give a consistent view 
             throughout all scenes to give a consistent and intuitive presentation of the human
@@ -25,7 +25,11 @@
             <button onclick="update('GNI')">y: Economy(GNI)</button>
             <button onclick="update('Lexp')">y: Medical(Life Expectation at Birth)</button>
             <button onclick="update('YOS')">y: Education(Years of Schooling)</button>
-            <svg id="scene3" width="900" height="550"></svg>
+            <svg id="scene3" width="900" height="550">
+                <text id = "anno" x="100" y="50" font-size="16" fill="black" font-weight="bold">
+                    -Lets try some different parameters!
+                 </text>
+            </svg>
             <script src="js/scene3.js"></script>
         </div>
         <!-- <a href="page2.html"><button class="round-button">PREV Scene</button></a> -->

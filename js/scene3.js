@@ -42,7 +42,17 @@ function update(parameter){
     .data(data)
 
     // console.log(data[parameter]);
-  
+    const textElement = d3.select("anno");
+    function fadeOut() {
+      textElement.transition()
+          .duration(3000) // Duration of the fade-out animation in milliseconds
+          .attr("opacity", 0) // Reduce the opacity to 0 (fully transparent)
+          .on("end", function() {
+              // Remove the text element after the fade-out animation completes
+              textElement.remove();
+          });
+    }
+    
     s.enter()
       .append("circle")
       .merge(s)
@@ -54,7 +64,7 @@ function update(parameter){
         .attr("height", function(d) { return height - y(parseFloat(d[parameter])); })
         .attr("fill",function (d, i) {return colorScale(parseFloat(d.HDI))})
         .attr("opacity", 0.8)
-    
+    fadeOut();
     const x_labelheight = height - 10;
     const x_labelwidth = width - 60;
     svg.append('g')

@@ -1,5 +1,5 @@
 var margin = {top: 10, right: 10, bottom: 90, left: 45},
-width = 1500 - margin.left - margin.right,
+width = 1000 - margin.left - margin.right,
 height = 500 - margin.top - margin.bottom;
 
 var svg = d3.select("#scene2")
@@ -21,7 +21,7 @@ var x_Country = d3.scaleBand()
     .attr("transform", "translate(0," + height + ")")
     .call(d3.axisBottom(x_Country))
     .selectAll("text")
-    .attr("transform", "translate(-10,0)rotate(-75)")
+    .attr("transform", "translate(-10,0)rotate(-50)")
     .style("text-anchor", "end");
 
 var y_GNI = d3.scaleLinear()

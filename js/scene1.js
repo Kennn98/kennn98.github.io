@@ -39,10 +39,8 @@ d3.csv("https://kennn98.github.io/data/human-development-index-hdi-2014.csv")
     .attr("r", 5)
     .attr("fill",function (d, i) {return colorScale(parseFloat(d.HDI))})
     .attr("opacity", 0.8)
-    .on("mouseover", showTooltip )
-    .on("mousemove", moveTooltip )
-    .on("mouseleave", hideTooltip )
 
+    // y label
     svg.append('g')
     .attr('transform', 'translate(' + 20 + ', ' + 50 + ')')
     .append('text')
@@ -50,8 +48,10 @@ d3.csv("https://kennn98.github.io/data/human-development-index-hdi-2014.csv")
     .attr('transform', 'rotate(-90)')
     .text('GNI(usd)')
 
+    const x_labelheight = height - 10;
+    const x_labelwidth = width - 50;
     svg.append('g')
-    .attr('transform', 'translate(' + 380 + ', ' + 360 + ')')
+    .attr('transform', 'translate(' + x_labelwidth + ', ' + x_labelheight + ')')
     .append('text')
     .attr('text-anchor', 'middle')
     .text('HDI')

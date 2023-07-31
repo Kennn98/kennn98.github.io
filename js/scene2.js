@@ -21,6 +21,7 @@ var x_Country = d3.scaleBand()
     .attr("transform", "translate(0," + height + ")")
     .call(d3.axisBottom(x_Country))
     .selectAll("text")
+    .attr('font-size',6)
     .attr("transform", "translate(-10,0)rotate(-50)")
     .style("text-anchor", "end");
 

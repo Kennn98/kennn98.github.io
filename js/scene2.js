@@ -1,5 +1,5 @@
 var margin = {top: 10, right: 10, bottom: 90, left: 45},
-width = 1000 - margin.left - margin.right,
+width = 1600 - margin.left - margin.right,
 height = 500 - margin.top - margin.bottom;
 
 var svg = d3.select("#scene2")
